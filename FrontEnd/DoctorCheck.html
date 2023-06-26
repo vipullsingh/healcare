@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/doctorDashbord.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="wrapper">
+        <div id="left-contaier">
+          <div id="left-contaier-doc">
+            <img class="doc-img" src="./images/doctor1.jpg" alt="doctor" />
+            <h3>Dr.Hariom Yadav</h3>
+            <div class="icon-email">
+              <i class="fa-solid fa-envelope"></i>
+              <h5 class="email">Hariom@HealCare.com</h5>
+            </div>
+          </div>
+          <ul class="icon-list">
+            <li>
+              <i class="fa-solid fa-house-user fa-lg"></i><a href="#">Bord</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-house-user fa-lg"></i><a href="#">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-house-user fa-lg"></i><a href="#">Check</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-house-user fa-lg"></i><a href="#">Check</a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-house-user fa-lg"></i><a href="#">Check</a>
+            </li>
+          </ul>
+        </div>
+        <div id="middle-contaier">
+          <div id="middle-hello-container">
+            <div id="middle-contaier-info">
+              <h1>Hello, Hariom</h1>
+              <p>Today is monday, 16 june 2023</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <button>Add New Time</button>
+            </div>
+          </div>
+          <div
+            style="
+              width: 90%;
+              margin-left: 5%;
+              margin-right: 5%;
+              margin-top: 20px;
+              display: flex;
+              gap: 10px;
+              text-align: center;
+              align-items: center;
+            "
+          >
+            <i class="fa-regular fa-bell"></i>
+            <h3>Resent Pending Appointments</h3>
+          </div>
+
+          <div id="appointmentsDiv"></div>
+        </div>
+        <div id="right-contaier">
+          <div id="right-wrapper">
+            <div id="calendar">
+              <i class="fa-solid fa-calendar"></i>
+              <h2>Calendar</h2>
+            </div>
+            <div id="approved-clint">
+              <div id="Dates">
+                <p>June 17, 2023</p>
+                <i
+                  id="toggleIcon"
+                  class="fa-solid fa-arrow-right fa-rotate-90"
+                ></i>
+              </div>
+              <table id="patientTable" class="patient-table">
+                <tbody>
+                  <tr>
+                    <td>10:00 AM</td>
+                    <td>John Doe</td>
+                    <td><button class="chat-button">Chat</button></td>
+                  </tr>
+                  <tr>
+                    <td>11:30 AM</td>
+                    <td>Jane Smith</td>
+                    <td><button class="chat-button">Chat</button></td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    var icon = document.getElementById("toggleIcon");
+    var table = document.getElementById("patientTable");
+
+    console.log(table.style.display);
+    icon.addEventListener("click", function () {
+      if (table.style.display === "table") {
+        table.style.display = "none";
+      } else {
+        table.style.display = "table";
+      }
+    });
+  });
+</script>
+
+<script src="../FrontEnd/js/doctorDashbord.js"></script>
